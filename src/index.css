@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* --- Light Mode (Default) --- */
+    --bg-canvas: #f8f7f4;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f0efea;
+    --bg-surface-subtle: #eae7e1;
+    --text-primary: #242622;
+    --text-secondary: #5a5c55;
+    --text-muted: #72746e;
+    --border-subtle: #e5e3de;
+    --border-strong: #d3d0c7;
+    --brand-bordeaux: #821828;
+    --brand-bordeaux-hover: #64101e;
+    --brand-bordeaux-subtle: rgba(130, 24, 40, 0.08);
+    --hero-overlay-start: rgba(248, 247, 244, 0.95);
+    --hero-overlay-mid: rgba(248, 247, 244, 0.85);
+    --hero-overlay-end: rgba(248, 247, 244, 0.50);
+    --shadow-soft: 0 4px 20px -2px rgba(36, 38, 34, 0.05);
+    --shadow-card: 0 2px 10px -1px rgba(36, 38, 34, 0.04), 0 1px 3px -1px rgba(36, 38, 34, 0.03);
+    color-scheme: light;
+  }
+
+  .dark {
+    /* --- Dark Mode --- */
+    --bg-canvas: #0b0f17;
+    --bg-surface: #121824;
+    --bg-surface-elevated: #172030;
+    --bg-surface-subtle: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-subtle: #222f44;
+    --border-strong: #334460;
+    --brand-bordeaux: #9e2336;
+    --brand-bordeaux-hover: #b82d43;
+    --brand-bordeaux-subtle: rgba(158, 35, 54, 0.18);
+    --hero-overlay-start: rgba(11, 15, 23, 0.96);
+    --hero-overlay-mid: rgba(11, 15, 23, 0.86);
+    --hero-overlay-end: rgba(11, 15, 23, 0.60);
+    --shadow-soft: 0 4px 24px -2px rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 2px 10px -1px rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.heading-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+/* Custom scrollbars matching theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-bordeaux);
+}

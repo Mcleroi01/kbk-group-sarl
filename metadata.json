@@ -1,0 +1,6 @@
+{
+  "name": "KBK GROUP SARL - Groupe Multisectoriel RDC",
+  "description": "Site corporate officiel de KBK GROUP SARL, groupe multisectoriel basé à Kinshasa (RDC) opérant dans les mines, le numérique, le négoce et la logistique. « L'effort fait le fort ».",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
